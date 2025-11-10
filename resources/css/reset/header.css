@@ -1,0 +1,98 @@
+header {
+    width: 100%;
+    display: block;
+}
+
+header .conteudo {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .conteudo .topo {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0px;
+}
+
+header .conteudo .topo .redes-sociais {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header .conteudo .topo .redes-sociais a {
+    width: max-content;
+    display: block;
+    margin: 0px 12px;
+}
+
+header .conteudo .topo .redes-sociais a i {
+    font-size: 25px;
+}
+
+header .conteudo .topo .contatos {
+    width: 100%;
+    display: inline-flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .conteudo .topo .contatos a {
+    margin: 5px 0px;
+}
+
+header .conteudo .topo .contatos a i {
+    margin-right: 10px;
+}
+
+header .conteudo .logo {
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+}
+
+header .conteudo .menu {
+    width: 100%;
+    display: block;
+}
+
+@media only screen and (min-width: 758px) {
+    header .conteudo .topo .redes-sociais {
+        width: max-content;
+    }
+
+    header .conteudo .topo .redes-sociais a:first-child {
+        margin-left: 0px;
+    }
+
+    header .conteudo .topo .redes-sociais a:last-child {
+        margin-right: 0px;
+    }
+
+    header .conteudo .topo .redes-sociais a i {
+        font-size: 16px;
+    }
+
+    header .conteudo .topo .contatos {
+        flex-direction: row;
+        width: max-content;
+    }
+
+    header .conteudo .topo .contatos a {
+        margin: 0 35px 0 0;
+    }
+
+    header .conteudo .topo .contatos a:last-child {
+        margin: 0;
+    }
+}
