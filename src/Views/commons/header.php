@@ -69,7 +69,7 @@
                         <a href="<?= URL_BASE ?>">Blog</a>
                         <a href="<?= URL_BASE ?>">Fale Conosco</a>
                     </nav>
-                    <a href="#">
+                    <a href="#" class="btn-nav">
                         <i class="fas fa-bars-staggered"></i>
                     </a>
                 </div>

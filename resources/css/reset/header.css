@@ -56,7 +56,8 @@ header .conteudo .topo .contatos a i {
 }
 
 header .conteudo .logo {
-    width: 100%;
+    width: max-content;
+    max-width: 180px;
     display: block;
     margin: 20px 0;
 }
@@ -68,42 +69,29 @@ header .conteudo .logo a {
 }
 
 header .conteudo .menu {
-    width: 100%;
+    width: max-content;
     display: block;
 }
 
 header .conteudo .menu nav {
-    width: 100%;
-    max-width: 1000px;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--color-primary);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 0px 13px;
-    position: relative;
+    margin: 0;
+    padding: 50px 25px;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    transition: .35s;
 }
 
-header .conteudo .menu nav::before {
-    width: 75px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -75px;
-    content: ' ';
-    background: linear-gradient(36deg, rgba(0, 0, 0, 0) 50%, rgba(27, 157, 217, 1) 50%)
-}
-
-header .conteudo .menu nav::after {
-    width: 75px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: -75px;
-    content: ' ';
-    background: linear-gradient(-36deg, rgba(0, 0, 0, 0) 50%, rgba(27, 157, 217, 1) 50%)
+header .conteudo .menu.active nav {
+    left: 0;
 }
 
 header .conteudo .menu nav a {
@@ -111,6 +99,16 @@ header .conteudo .menu nav a {
     font-family: var(--font-family-semibold);
 }
 
+header .conteudo .menu a i {
+    font-size: 40px;
+}
+
+header .conteudo .menu.active a.btn-nav {
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-170px) translateX(-40px);
+    transition: .35s;
+}
 
 @media only screen and (min-width: 758px) {
     header .conteudo .topo .redes-sociais {
@@ -140,5 +138,53 @@ header .conteudo .menu nav a {
 
     header .conteudo .topo .contatos a:last-child {
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+    header .conteudo .logo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header .conteudo .menu {
+        width: 100%;
+    }
+
+    header .conteudo .menu nav {
+        max-width: 1000px;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0px 13px;
+        position: relative;
+        top: initial;
+        left: initial;
+    }
+
+    header .conteudo .menu nav::before {
+        width: 75px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -75px;
+        content: ' ';
+        background: linear-gradient(36deg, rgba(0, 0, 0, 0) 50%, rgba(27, 157, 217, 1) 50%)
+    }
+
+    header .conteudo .menu nav::after {
+        width: 75px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -75px;
+        content: ' ';
+        background: linear-gradient(-36deg, rgba(0, 0, 0, 0) 50%, rgba(27, 157, 217, 1) 50%)
+    }
+
+    header .conteudo .menu a.btn-nav {
+        display: none;
     }
 }
