@@ -2,3 +2,6 @@
 @import url('fonts/montserrat.css');
 @import url('reset/reset.css');
 @import url('reset/header.css');
+
+/* Blocos */
+@import url('blocos/slider-banner.css');

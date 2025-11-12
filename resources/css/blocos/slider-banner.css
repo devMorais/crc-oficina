@@ -1,0 +1,38 @@
+.slide-banner,
+.slide-banner .conteudo,
+.slide-banner .conteudo .itens,
+.slide-banner .conteudo .itens .item a,
+.slide-banner .conteudo .itens .item a img {
+    width: 100%;
+    display: block;
+}
+
+.slide-banner {
+    margin-top: -54PX;
+    z-index: 0;
+    position: relative;
+}
+
+.slide-banner .conteudo .itens .item {
+    width: 100%;
+    display: inline-block;
+}
+
+.slide-banner .conteudo .itens {
+    position: relative;
+}
+
+.slide-banner .conteudo .itens .slick-arrow {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 20px);
+    font-size: 30px;
+}
+
+.slide-banner .conteudo .itens .slick-arrow.slick-prev {
+    left: 25px;
+}
+
+.slide-banner .conteudo .itens .slick-arrow.slick-next {
+    right: 25px;
+}
